@@ -1,0 +1,26 @@
+!!!
+html
+head
+  title bits-hit-fan: #{title}
+  style
+    h1 {color:#f03020}
+    li {position:relative;}
+    .nick {position:absolute; left:0px;}
+    .btcaddr {position:absolute; left:200px;}
+    .shares {position:absolute; left:400px;}
+body
+  #container
+    h1 bits-hit-fan
+    h2 title
+    
+    ul
+      li
+        span(class='nick') Nick
+        span(class='btcaddr') Outgoing address
+        span(class='shares') Shares
+      each blade in blades
+        li
+          span(class='nick')= blade.nick
+          span(class='btcaddr')= blade.btcaddr
+          span(class='shares')= blade.shares
+
